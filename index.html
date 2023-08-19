@@ -1,0 +1,54 @@
+<!DOCTYPE html theme="light">
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="container mx-auto flex justify-between bg-blue-100 p-8 text-black mb-12 mt-12">
+            <div class="text">
+                <h3 class="text-2xl font-bold">Interactive</h3>
+                <p>Geometry Genius</p>
+            </div>
+            <button class="px-8 py-2 bg-blue-400 rounded-md">Blog</button>
+        </div>
+    </header>
+    <main>
+        <div class="container mx-auto">
+            <div class="flex">
+                <!-- area -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" >
+                    <!-- triangle card-->
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                            <h2 class=" text-xl ">Triangle</h2>
+                            <p class="">Area(A) = 0.5 X b X h</p>
+                            <p class="text-left">Area:<span id="triangle-area"></span></p>
+                            <p class="space-x-2">
+                                <input id="base-input" class="bg-gray-200 w-24 px-2 py-1" type="text" placeholder="base">
+                                <label for="">cm</label>
+                                <input id="height-input" class="bg-gray-200 w-24 px-2 py-1" type="text" placeholder="height">
+                                <label for="">cm</label>
+                            </p>
+                          <div class="card-actions ">
+                            <button id="tirangle-calculate" class="btn btn-primary w-full mt-4">Calculate</button>
+                          </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <!-- area calculation -->
+                <div></div>
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="scripts/calculate.js"></script>
+</body>
+</html>
