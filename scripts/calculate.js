@@ -8,19 +8,26 @@ function getInput(id){
     
 }
 
+function setResult (elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+// triangle area calculate
 document.getElementById('tirangle-calculate').addEventListener('click', function(){
-
-    const base = getInput('base-input');
-    console.log(base);
-     
-    const height = getInput('height-input');
-    console.log(height);
-
-    const area = 0.5 * base * height;
-    console.log(area);
-
-    // setArea(area);
-    const triangleArea = document.getElementById('triangle-area');
-    triangleArea.innerText = area;
     
+    const base = getInput('base-input');
+    const height = getInput('height-input');
+    const area = 0.5 * base * height;
+
+    setResult('triangle-area', area);
+})
+
+// rectangle calculate
+document.getElementById('rectangle-calculate').addEventListener('click', function(){
+
+    const width = getInput('width-input');
+    const length = getInput('length-input');
+    const rectangleArea = width * length;
+
+    setResult('rectangle-value', rectangleArea);
 })
